@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Playground</title>
+    <style>
+    .container {
+        margin: 0 auto;
+        width: 970px;
+        text-align: center;
+    }
+    .block {
+        margin: 20px;
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        background-color: cyan;
+        /* margin: 0 auto; */
+    }
+    .color {
+        background-color: {{color}};
+    }
+
+    </style>
+</head>
+<body>
+    <h3>Welcome!</h3>
+    <div class="container">
+        {% for i in range (0, times): %}
+        <div class="block color"></div>
+        {% endfor %}
+    </div>
+    <!-- <h3>My playground template</h3>
+    <p>Phrase: {{ phrase }}</p>
+    <p>Times: {{ times }}</p>
+    {% for x in range(0,times): %}
+        <p>{{ phrase }}</p>
+    {% endfor %}
+        
+    {% if phrase == "hello" %}
+      <p>The phrase says hello</p>
+    {% endif %} -->
+</body>
+</html>
